@@ -666,6 +666,44 @@
             transform: scale(1.1);
         }
 
+        /* Caption under portfolio image */
+        .portfolio-caption {
+            padding: 16px 18px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+        .portfolio-caption h3 {
+            font-size: 1.2rem;
+            margin: 0 0 8px 0;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .portfolio-caption p {
+            margin: 0;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        .caption-link {
+            color: var(--primary-color);
+            font-size: 1rem;
+            line-height: 1;
+            transition: var(--transition);
+        }
+        .caption-link:hover {
+            color: var(--white);
+            transform: translateY(-1px);
+        }
+        .portfolio-item.no-overlay {
+            justify-content: flex-start;
+        }
+        .portfolio-item.no-overlay img {
+            height: auto;
+        }
+        .portfolio-item.no-overlay .portfolio-overlay {
+            display: none;
+        }
+
         /* Contact Section */
         .contact-content {
             display: flex;
@@ -1544,7 +1582,11 @@
             <div class="certificates-grid">
                 <div class="certificate-card" data-image="Internship for full stack.jpeg">
                     <img src="Internship for full stack.jpeg" alt="Internship-certificate">
-                    <h3>Internship-certificate</h3>
+                    <h3>Full-Stack Internship</h3>
+                </div>
+                <div class="certificate-card" data-image="Python Internship">
+                    <img src="Python Internship.png" alt="Python Internship">
+                    <h3>Python Internship</h3>
                 </div>
                 <div class="certificate-card" data-image="TATA Gen-AI.png">
                     <img src="TATA Gen-AI.png" alt="TATA Gen-AI">
@@ -1573,6 +1615,14 @@
                 <div class="certificate-card" data-image="MERN stack.jpeg">
                     <img src="MERN stack.jpeg" alt="MERN stack">
                     <h3>MERN Stack</h3>
+                </div>
+                <div class="certificate-card" data-image="Brain computer.png">
+                    <img src="Brain computer.png" alt="Brain computer interface">
+                    <h3>Brain Computer Interface</h3>
+                </div>
+                <div class="certificate-card" data-image="Python Udemy.png">
+                    <img src="Python Udemy.png" alt="Python Udemy">
+                    <h3>Python Udemy</h3>
                 </div>
                 <div class="certificate-card" data-image="mongo db, Ai.jpeg">
                     <img src="mongo db, Ai.jpeg" alt="MogoDB, AI, Vector-search">
@@ -1606,24 +1656,45 @@
                 <button class="filter-btn" data-filter="design">Design</button>
             </div>
             <div class="portfolio-grid">
-                <div class="portfolio-item" data-category="web">
+                <div class="portfolio-item no-overlay" data-category="web">
                     <img src="Expense.jpg" alt="Expense Tracker">
+                    <div class="portfolio-caption">
+                        <h3>
+                            Expense Tracker
+                            <a href="https://abhi0626-kr.github.io/Expense-Tracker/" class="caption-link" target="_blank" title="View Project"><i class="fas fa-external-link-alt"></i></a>
+                        </h3>
+                        <p>Smart money management system with real-time tracking.</p>
+                    </div>
                     <div class="portfolio-overlay">
                         <h3>Expense Tracker</h3>
                         <p>Web Development</p>
                         <a href="https://abhi0626-kr.github.io/Expense-Tracker/" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="app">
+                <div class="portfolio-item no-overlay" data-category="app">
                     <img src="AI.jpg" alt="Mobile App">
+                    <div class="portfolio-caption">
+                        <h3>
+                            AI Assistant
+                            <a href="https://abhi0626-kr.github.io/AI-Chatbot/" class="caption-link" target="_blank" title="View Project"><i class="fas fa-external-link-alt"></i></a>
+                        </h3>
+                        <p>Intelligent chatbot with NLP-powered conversations.</p>
+                    </div>
                     <div class="portfolio-overlay">
                         <h3>AI Assistant</h3>
                         <p>App Development</p>
                         <a href="https://abhi0626-kr.github.io/AI-Chatbot/" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="design">
+                <div class="portfolio-item no-overlay" data-category="design">
                     <img src="logo.jpg" alt="Jarvis E-commerce">
+                    <div class="portfolio-caption">
+                        <h3>
+                            E-commerce
+                            <a href="https://abhi0626-kr.github.io/Jarvis./" class="caption-link" target="_blank" title="View Project"><i class="fas fa-external-link-alt"></i></a>
+                        </h3>
+                        <p>Full-featured online shopping platform with cart & checkout.</p>
+                    </div>
                     <div class="portfolio-overlay">
                         <h3>E-commerce</h3>
                         <p>Web Development</p>
